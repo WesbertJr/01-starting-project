@@ -3,7 +3,7 @@ import CoreConcepts from './components/CoreConcepts.jsx';
 import { CORE_CONCEPTS } from './data.js';
 import { EXAMPLES } from './data.js';
 import TabButton from './components/TabButton.jsx';
-import {useState} from 'react';
+import {useState, Fragment} from 'react';
 
 function App() {
   const [ selectedTopic, setSelectedTopic ] = useState();
@@ -14,7 +14,7 @@ function App() {
 }
 
   return (
-    <div>
+    <Fragment>
       <Header/>
       <main>
       <section id="core-concepts">
@@ -44,7 +44,7 @@ function App() {
          ) : <p>Please select a topic</p> }
       </section>
       </main>
-    </div>
+    </Fragment>
   );
 }
 
